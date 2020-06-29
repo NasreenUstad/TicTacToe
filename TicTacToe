@@ -35,8 +35,8 @@ pygame.display.set_caption("Tic Tac Toe")
 
 # loading the images
 bg_image = pygame.image.load('images/tic tac opening.png')
-x_image = pygame.image.load('images/X.png')
-o_image = pygame.image.load('images/O.png')
+x_image = pygame.image.load('images/x_img.png')
+o_image = pygame.image.load('images/o_img.png')
 
 # resizing images
 x_img = pygame.transform.scale(x_image, (80, 80))
@@ -179,7 +179,8 @@ def reset_game():
 
 def game_opening():
     # similar to Splash screen
-    screen.blit(bg_image, (0, 0))
+    # screen.blit(bg_image, (0, 0))
+    screen.fill(primary_color)
     pygame.display.update()
     time.sleep(1)
     screen.fill((255, 255, 255))
